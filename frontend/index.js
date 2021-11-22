@@ -1,3 +1,6 @@
+//Kilde til design af frontend https://www.youtube.com/watch?v=GAOBXGPuKqo&ab_channel=EasyTutorials 
+
+//Kilde: https://www.youtube.com/watch?v=3GsKEtBcGTk&ab_channel=dcode 
 document.addEventListener("DOMContentLoaded", (event) => {
     const bruger = localStorage.getItem("bruger");
     if (!bruger) {
