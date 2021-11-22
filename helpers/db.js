@@ -10,11 +10,11 @@ const Altdata = __dirname+ "./../../data";
 // Vi har nu en variabel som indeholder alt fra vores JSON data fil.
 class DB {
     constructor() {
-        this.users = this.openFile();
+        this.brugere = this.openFile();
     }
     //Vi vil gerne kunne gemme vores fil så derfor bruger vi saveFile
     saveFile() {
-        fs.writeFileSync(Altdata+brugerData, this.users);
+        fs.writeFileSync(Altdata+brugerData, this.brugere);
     }
     //Åbne vores fil
     openFile() {
@@ -22,8 +22,12 @@ class DB {
         return JSON.parse(file);        
     }
     //En bestemt bruger
-    saveUser(user) {
-        this.users.push(user);
+    saveUser(bruger) {
+        this.brugere.push(bruger);
         this.saveFile();
     }    
+    //Login af bruger
+    findUser(bruger) {
+        return this.brugere.find((x) => bruger.email == x.email);
+    }
 }
