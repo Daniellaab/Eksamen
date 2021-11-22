@@ -24,3 +24,13 @@ router.post("/login", (req, res) => {
       res.status(404).send(false);
     }
   });
+
+//Ny rute til sletning af brugere
+  router.delete("/slet", (req, res) => {
+    const user = new userModel(req.body.email, req.body.kode);
+    db.deleteBruger(bruger);
+    res.status(200).send(true);
+  });
+
+//Kilde: https://www.sitepoint.com/understanding-module-exports-exports-node-js/ 
+  module.exports = router;

@@ -25,7 +25,14 @@ class DB {
     saveUser(bruger) {
         this.brugere.push(bruger);
         this.saveFile();
-    }    
+    }
+
+    //Sletningen af brugere
+    deleteUser(user) {
+        this.users = this.users.filter((x) => x.email != user.email);
+        this.saveFile(USER_FILE, JSON.stringify(this.users));
+    }
+    
     //Login af bruger
     findUser(bruger) {
         return this.brugere.find((x) => bruger.email == x.email);
