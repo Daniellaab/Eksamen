@@ -6,3 +6,6 @@ const PORT = 4000;
 app.listen(PORT, () => {
     console.log(`Server lytter på http://localhost:${PORT}`);
 });
+
+// Vores routes
+app.use("/bruger", brugerCont);
