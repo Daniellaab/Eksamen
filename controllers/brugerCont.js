@@ -7,9 +7,5 @@ const db = require("./../helpers/db")
 router.post("/opret", (req, res) => {
     const bruger = userModel(req.body.email, req.body.kode);
     db.saveUser(bruger);
-    console.log(bruger);  
-});
-
-routes.get("/", (req, res) => {
     res.status(200).send(true);
 });
