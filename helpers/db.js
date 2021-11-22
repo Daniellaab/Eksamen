@@ -3,14 +3,14 @@ var fs = require('fs');
 
 // Opretter const til vores path for brugere og samlet data
 const brugerData = "/users.json";
-const Altdata = "/data";
+const Altdata = __dirname+ "./../../data";
 
 // Kilde: https://www.w3schools.com/js/js_object_constructors.asp 
 // Kilde: https://stackabuse.com/reading-and-writing-json-files-with-node-js/ 
 // Vi har nu en variabel som indeholder alt fra vores JSON data fil.
 class DB {
     constructor() {
-        this.users = openFile(brugerData);
+        this.users = this.openFile();
     }
     //Vi vil gerne kunne gemme vores fil så derfor bruger vi saveFile
     saveFile() {

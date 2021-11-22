@@ -8,4 +8,4 @@ app.listen(PORT, () => {
 });
 
 // Vores routes
-app.use("/bruger", brugerCont);
+//app.use("/bruger", brugerCont);
