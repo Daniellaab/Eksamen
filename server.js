@@ -7,5 +7,12 @@ app.listen(PORT, () => {
     console.log(`Server lytter på http://localhost:${PORT}`);
 });
 
+//Vi skal benytte os af controllers
+const brugerCont = require("./controllers/brugerCont")
+
+//Frontend
+app.use(express.static("./frontend"));
+app.use(express.json());
+
 // Vores routes
-//app.use("/bruger", brugerCont);
+app.use("/bruger", brugerCont);
