@@ -24,7 +24,7 @@ document.addEventListener("DOMContentLoaded", (event) => {
           }
         })
         .catch(() => {
-          window.alert("Fejl");
+          window.alert("Fejlmeddelse");
         });
     });
   });

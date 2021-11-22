@@ -15,7 +15,7 @@ document.addEventListener("DOMContentLoaded", (event) => {
         kode: kode,
       };
   
-      fetch("http://localhost:4000/bruger/login", {
+      fetch("http://localhost:4000/brugere/login", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -34,7 +34,7 @@ document.addEventListener("DOMContentLoaded", (event) => {
           }
         })
         .catch(() => {
-          window.alert("Fejl");
+          window.alert("Fejlmeddelse");
         });
     });
   });

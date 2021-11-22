@@ -23,11 +23,11 @@ document.addEventListener("DOMContentLoaded", (event) => {
         .then((response) => response.json())
         .then((response) => {
             if (response) {
-                location.href = "/";
+                location.href = "/login.html";
             }
         })
         .catch(() => {
-            window.alert("Fejl");
+            window.alert("Fejlmeddelse");
         });
     });
 });

@@ -3,38 +3,38 @@ var fs = require('fs');
 
 // Opretter const til vores path for brugere og samlet data
 const brugerData = "/users.json";
-const Altdata = __dirname+ "./../../data";
+const Altdata = __dirname + "/../../data";
 
 // Kilde: https://www.w3schools.com/js/js_object_constructors.asp 
 // Kilde: https://stackabuse.com/reading-and-writing-json-files-with-node-js/ 
 // Vi har nu en variabel som indeholder alt fra vores JSON data fil.
 class DB {
     constructor() {
-        this.brugere = this.openFile();
+        this.brugere = this.openFile(Altdata);
     }
     //Vi vil gerne kunne gemme vores fil så derfor bruger vi saveFile
-    saveFile() {
-        fs.writeFileSync(Altdata+brugerData, this.brugere);
+    saveFile(fileName, contentString) {
+        fs.writeFileSync(Altdata+ fileName, contentString);
     }
     //Åbne vores fil
-    openFile() {
-        const file = fs.readFileSync(brugerData+Altdata);
+    openFile(fileName) {
+        const file = fs.readFileSync(Altdata + fileName);
         return JSON.parse(file);        
     }
     //En bestemt bruger
-    saveUser(bruger) {
-        this.brugere.push(bruger);
-        this.saveFile();
-    }
+    // saveUser(bruger) {
+    //     this.brugere.push(bruger);
+    //     this.saveFile();
+    // }
 
     //Sletningen af brugere
-    deleteUser(user) {
-        this.users = this.users.filter((x) => x.email != user.email);
-        this.saveFile(USER_FILE, JSON.stringify(this.users));
+    deleteUser(bruger) {
+        this.brugere = this.brugere.filter((x) => x.email != bruger.email);
+        this.saveFile(Altdata, JSON.stringify(this.brugere));
     }
     
     //Login af bruger
-    findUser(bruger) {
+    saveUser(bruger) {
         return this.brugere.find((x) => bruger.email == x.email);
     }
 }
