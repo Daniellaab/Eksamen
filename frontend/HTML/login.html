@@ -3,21 +3,32 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Den blå bazar</title>
+    <title>Loginside</title>
     <link rel="stylesheet" href="style.css">
   </head>
+
   <body>
-    <h1>Login</h1>
-    <form id="form">
-    <div class="login">
-      <form class="login-form">
-        <input type="tekst" placeholder="Email" id="email" />
-        <input type="Kode" placeholder="Kode" id="kode" />
-        <button>Login</button>
-        <p class="Besked">Ny her? <a href="#">Registrer dig</a></p> 
-    </form>
-    </div> 
+    <h1>Login her</h1>
+    <br><br>
+
+  <div>
+    <th>
+      <input type="text" class="Email_login" id="email_input" placeholder="Email">
+    </th>
+  </div>
+  <br>
+    <div>
+      <th>
+        <input type="kode" class="Login_login" id="kode_input" placeholder="Kode">
+      </th>
     </div>
-    <script>src="login.js"</script>
+    <br>
+    <button class="Login_knap" id="login_knap">Login </button>
+
+    <br><br>
+    <p class="Til_forside">Har du ingen bruger på Den blå bazar?</p>
+
+    <a href="/registrer" class="Til_forside_link">Tryk her!</a>
+    <script src="/JS/login.js"></script>
   </body>
 </html>
