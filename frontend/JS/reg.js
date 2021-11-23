@@ -1,6 +1,8 @@
 const { json } = require("body-parser");
 const { response } = require("express");
 
+let firstField = document.getElementById("fornavn_input")
+let lastField = document.getElementById("efternavn_input")
 let submit_btn = document.getElementById("opret_bruger_knap");
 let emailField = document.getElementById("email_input");
 let kodeField = document.getElementById("kode_input");
@@ -8,6 +10,8 @@ let kodeField = document.getElementById("kode_input");
 submit_btn.onclick = () => {
     submit_btn.disabled = true;
     const bruger = {
+        fornavn: firstField.value,
+        efternavn: lastField.value,
         email: emailField.value,
         kode: kodeField.value
     }
