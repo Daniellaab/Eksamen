@@ -4,21 +4,37 @@
     <link rel="stylesheet" href="style.css">
   </head>
   <body>
-    <h1>Register</h1>
-    <form id="form">
-    <div class="login">
-    <div class="form">
-      <form class="registrering">
-        <input type = "text" placeholder="Email" id="email" />
-        <input type = "text" placeholder="Kode" id="Kode" />
-        <button>Opret en profil</button>
-        <p class="Besked">Har du allerede en profil? <a href="#">Login her</a>
-        </p>
-        </form>
-    </form>
-  </div>
-  </div>
-  <script src="reg.js"></script>
+    <h1>Velkommen til Den blå bazar!</h1>
+
+    <h2>Her kan du oprette en bruger</h2>
+    <div>
+      <a href="/" class="Login_link">Allerede bruger? Login her</a>
+    </div>
+    <br><br>
+
+      <tr>
+        <th id="Email"></th>
+        <td>
+          <input type="email" placeholder="Email adresse" id="email_input" class="Email">
+        </td>
+    </tr>
+
+  <tr>
+      <th id="Kode"></th>
+      <td>
+          <input type="kode" placeholder="Kode" id="kode_input" class="Kode">
+      </td>
+  </tr>
+  
+  <tr>
+    <th>
+        <br><br>
+    <button id="opret_bruger_knap" class="opret_bruger_knap">Opret</button>
+    </th>
+</tr>
+
+<script src="reg.js"></script>
+
 </body>
 </html>
 
