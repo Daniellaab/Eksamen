@@ -5,12 +5,29 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Den blå bazar</title>
     <link rel="stylesheet" href="style.css">
-    <script src="hovedside.js"></script>
+    <script src="/frontend/JS/hovedside.js"></script>
   </head>
   <body>
-    <h1>We are live!</h1>
-    <form id="slet">
-      <input value="slet" type="opret" />
-    </form>
+    <h1 id="status_header"></h1>
+    <h4 id="data_text"></h2>
+      <br>
+      <h2>Nu er du klar til at sælge dine varer på Den blå bazar</h2>
+
+      <br><br><br><br>
+      <br>
+
+      <a href="Sælg" class="sælg">Sælg dine varer her</a>
+      <button class="Logud_knap" id="logud_btn">Log ud</button>
+
+      <button class="Slet_knap" id="slet_btn">Slet bruger</button>
+
+      <a href="Opdater">
+        <button class="opdater_bruger_knap" id="opdater_bruger_knap">Opdater din bruger</button>
+      </a>
+      <br>
+
+      <a class="Sælg" href="AlleVarer">
+        Se alle varer
+      </a>
   </body>
 </html>
