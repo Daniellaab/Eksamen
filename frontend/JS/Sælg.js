@@ -1,5 +1,5 @@
 let sælg_btn = document.getElementById("sælg_btn");
-let bruger_navn = document.getElementById("bruger_navn");
+let vare_navn = document.getElementById("vare_navn");
 let pris = document.getElementById("pris");
 let beskrivelse = document.getElementById("beskrivelse");
 let vareBillede = document.getElementById("vareBillede");
