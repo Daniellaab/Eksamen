@@ -1,7 +1,7 @@
 const { response } = require("express");
 
 //Opdatere 
-let submit_btn = document.getElementById("gen_bruger_knap");
+let submit_btn = document.getElementById("gem_bruger_knap");
 let firstField = document.getElementById("opdater_fornavn");
 let lastField = document.getElementById("opdater_efternavn");
 let kodeField = document.getElementById("opdater_kode");
