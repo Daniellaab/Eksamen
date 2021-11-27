@@ -25,7 +25,6 @@ async function fetchAdmin(token) {
 }
 
 const ikkeAdmin = () => {
-    console.log("Test test")
     window.location.replace("/");
     alert("For at benytte denne side skal du være admin\n")
 }
