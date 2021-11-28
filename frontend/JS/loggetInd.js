@@ -3,7 +3,7 @@ function CheckLogin() {
     if (!window.localStorage.getItem("token")) {
         missingElement = true;
     }
-    if (!window.localStorage.getItem("user_information")) {
+    if (!window.localStorage.getItem("bruger_info")) {
         missingElement = true;
     }
     if (missingElement) {
