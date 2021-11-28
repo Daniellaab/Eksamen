@@ -3,12 +3,10 @@ const { response } = require("express");
 const token = window.localStorage.getItem("token");
 
 const dropdown = document.getElementById("dropdown-indhold");
-const antal_varer = document.getElementById("antal_varer");
 const alle_varer = document.getElementById("alle_varer");
 
 fetchData().then(response => {
     console.log(response)
-    antal_varer.innerHTML = "Antal varer til salg" + response.varer_nummer
     alle_varer.innerHTML = "Alle varer til salg på Den blå bazar:" + response.alleVarerPræs.lenght
 
     for (var i = 0; i < response.alleVarerPræs.lenght; i++) {
