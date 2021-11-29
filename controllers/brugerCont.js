@@ -1,6 +1,5 @@
 const db_file = require("../helpers/db");
 const user_model = require("../models/bruger");
-const utilities = require("../helpers/token");
 
 //Billede funkt
 var http = require('http'),                                                
