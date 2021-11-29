@@ -2,12 +2,12 @@
 const express = require('express');
 const app = express();
 
-
 //Vi skal benytte os af controllers
 const brugerCont = require("./controllers/brugerCont");
 
 //Frontend
-app.use(express.static("./frontend"));
+app.use(express.static("./frontend/HTML"));
+app.use(express.static("./frontend/JS"));
 app.use(express.json());
 
 // Vores routes
@@ -19,7 +19,7 @@ app.use("/brugere", brugerCont);
 // const bruger = require('./models/bruger');
 // app.use(bodyParser.urlencoded({ extended: false })); 
 
-const PORT = 4000;
+const PORT = 1801;
 app.listen(PORT, () => {
     console.log(`Server lytter på http://localhost:${PORT}`);
 });

@@ -4,7 +4,7 @@ document.addEventListener("DOMContentLoaded", (event) => {
       location.href = "/";
     }
   
-    document.getElementById("form").addEventListener("login", (event) => {
+    document.getElementById("form").addEventListener("submit", (event) => {
       event.preventDefault();
   
       const email = document.getElementById("email").value;
@@ -15,7 +15,7 @@ document.addEventListener("DOMContentLoaded", (event) => {
         kode: kode,
       };
   
-      fetch("http://localhost:4000/brugere/login", {
+      fetch("http://localhost:1801/brugere/login", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

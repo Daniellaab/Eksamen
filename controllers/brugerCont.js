@@ -6,22 +6,20 @@ const userModel = require("./../models/bruger");
 
 const db = require("./../helpers/db");
 
-const bruger = require("./../models/bruger");
-
 router.post("/opret", (req, res) => {
-  const user = new userModel(req.body.email, req.body.kode);
+  const bruger = new userModel(req.body.email, req.body.kode);
   db.saveUser(bruger);
   res.status(200).send(true);
 });
 
 router.delete("/delete", (req, res) => {
-  const user = new userModel(req.body.email, req.body.kode);
+  const bruger = new userModel(req.body.email, req.body.kode);
   db.deleteUser(bruger);
   res.status(200).send(true);
 });
 
 router.post("/login", (req, res) => {
-  const user = new userModel(req.body.email, req.body.kode);
+  const bruger = new userModel(req.body.email, req.body.kode);
   const found = db.findUser(bruger);
   if (found) {
     if (bruger.kode == found.kode) {
