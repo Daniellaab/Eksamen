@@ -2,7 +2,7 @@
 var fs = require('fs');
 
 // Opretter const til vores path for brugere og samlet data
-const Altdata = __dirname + "/../../data";
+const Altdata = __dirname + "/../data";
 const brugerData = "/users.json";
 
 
@@ -39,9 +39,11 @@ class DB {
         this.brugere.push(bruger);
         this.saveFile(brugerData, JSON.stringify(this.brugere));
     }
-    
+
     //Find bruger
     findUser(bruger) {
         return this.brugere.find((x) => bruger.email == x.email);
     }
 }
+
+module.exports = new DB();
