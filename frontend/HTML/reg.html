@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html>
   <head>
     <title>Den blå bazar</title>
@@ -8,57 +9,30 @@
 
     <h2>Her kan du oprette en bruger</h2>
     <div>
-      <a href= login.html class="Login_link">Allerede bruger? Login her</a>
-    </div>
-    <br><br>
-
-    <div>
-      <tr>
-        <th id="Fornavn"></th>
-        <td>
-            <input type="text" placeholder="Fornavn" id="fornavn_input" class="Fornavn">
-        </td>
-    </tr>
+    <form id="form">
+      <div>
+      <input type="text" placeholder="Fornavn" id="fornavn_input" class="Fornavn"/>
     </div>
     <br>
-
     <div>
-    <tr>
-        <th id="Efternavn"></th>
-        <td>
-            <input type="text" placeholder="Efternavn" id="efternavn_input" class="Efternavn">
-        </td>
-    </tr>
-</div>
-<br>
-
-      <tr>
-        <th id="Email"></th>
-        <td>
-          <input type="email" placeholder="Email" id="email_input" class="Email">
-        </td>
-    </tr>
+      <input type="text" placeholder="Efternavn" id="efternavn_input" class="Efternavn"/>
+    </div>
+    <br>
+    <div>
+      <input type="email" placeholder="Email" id="email_input" class="Email"/>
+    </div>
+    <br>
+    <div>
+      <input type="password" placeholder="Kode" id="kode_input" class="Kode"/>
+    </div>
+    <br>
+    <div>
+      <input type="submit" value="Opret"/>
+    </form>
   </div>
-  <br>
-  <br>
-
-<div>
-  <tr>
-      <th id="Kode"></th>
-      <td>
-          <input type="password" placeholder="Kode" id="kode_input" class="Kode">
-      </td>
-  </tr>
-</div>
-  
-  <tr>
-    <th>
-        <br>
-        <a href= hovedside.html>
-    <button id="opret_bruger_knap" class="opret_bruger_knap">Opret</button>
-      </a>
-    </th>
-</tr>
+    <div>
+      <a href= login.html class="Login_link">Allerede bruger? Login her</a>
+    </div>
 
 <script src="reg.js"></script>
 

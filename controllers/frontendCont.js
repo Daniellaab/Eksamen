@@ -21,7 +21,7 @@ exports.opdaterSide = function (request, response) {
 } 
 
 exports.sælgeSide = function (request, response) {
-    response.sendFile(path.join(__dirname, '../frontend/HTML/sælg.html'));
+    response.sendFile(path.join(__dirname, '../frontend/HTML/sell.html'));
 }
 
 exports.alleVarerSide = function (request, response) {
@@ -29,7 +29,4 @@ exports.alleVarerSide = function (request, response) {
 } 
 exports.visVarerSide = function (request, response) {
     response.sendFile(path.join(__dirname, '../frontend/HTML/visVarer.html'));
-} 
-exports.adminBruger = function (request, response) {
-    response.sendFile(path.join(__dirname, '../frontend/HTML/opdaterAdmin.html'));
 } 
