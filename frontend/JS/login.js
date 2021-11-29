@@ -4,7 +4,7 @@ document.addEventListener("DOMContentLoaded", (event) => {
       location.href = "/";
     }
   
-    document.getElementById("form").addEventListener("opret", (event) => {
+    document.getElementById("form").addEventListener("login", (event) => {
       event.preventDefault();
   
       const email = document.getElementById("email").value;

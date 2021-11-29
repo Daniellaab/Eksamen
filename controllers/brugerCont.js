@@ -1,7 +1,11 @@
 const express = require("express");
+
 const router = express.Router();
+
 const userModel = require("./../models/bruger");
+
 const db = require("./../helpers/db");
+
 const bruger = require("./../models/bruger");
 
 router.post("/opret", (req, res) => {

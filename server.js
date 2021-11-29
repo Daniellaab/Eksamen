@@ -19,12 +19,7 @@ app.use("/brugere", brugerCont);
 // const bruger = require('./models/bruger');
 // app.use(bodyParser.urlencoded({ extended: false })); 
 
-// const PORT = 4000;
-// app.listen(PORT, () => {
-//     console.log(`Server lytter på http://localhost:${PORT}`);
-// });
-
-const PORT = process.env.PORT || 4000;
+const PORT = 4000;
 app.listen(PORT, () => {
     console.log(`Server lytter på http://localhost:${PORT}`);
 });
