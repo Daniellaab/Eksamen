@@ -26,7 +26,7 @@ fetchBrugerInfo().then(bruger_info => {
             kode: kodeField.value,
         }
     
-        OpdateBruger(bruger)
+        OpdaterBruger(bruger)
             .then((response) => {
                 if (!response) {
                     throw new Error("Server fejl");
@@ -86,8 +86,8 @@ async function fetchBrugerInfo() {
     }
 }
 
-async function DeleteUser() {
-    const response = await fetch("../deleteUser/" + _id, {
+async function DeleteBruger() {
+    const response = await fetch("../deleteBruger/" + _id, {
         method: "DELETE",
         headers: {
             "content-Type": "application/json",
