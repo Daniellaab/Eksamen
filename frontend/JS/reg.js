@@ -21,7 +21,7 @@ document.addEventListener("DOMContentLoaded", (event) => {
         .then((response) => response.json())
         .then((response) => {
             if (response) {
-                location.href = "//login.html";
+                location.href = "/hovedside.html";
             }
             // window.localStorage.setItem("bruger_information", JSON.stringify(bruger));
             // window.location.replace("/frontend/HTML/hovedside");
