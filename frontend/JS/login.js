@@ -4,11 +4,11 @@ document.addEventListener("DOMContentLoaded", (event) => {
       location.href = "/";
     }
   
-    document.getElementById("form").addEventListener("submit", (event) => {
+    document.getElementById("loginform").addEventListener("submit", (event) => {
       event.preventDefault();
   
-      const email = document.getElementById("email").value;
-      const kode = document.getElementById("kode").value;
+      const email = document.getElementById("email_input").value;
+      const kode = document.getElementById("kode_input").value;
   
       const bruger = {
         email: email,
