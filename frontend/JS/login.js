@@ -28,7 +28,7 @@ document.addEventListener("DOMContentLoaded", (event) => {
             //Kilde: https://www.freecodecamp.org/news/how-to-store-data-in-web-browser-storage-localstorage-and-session-storage-explained/
             //Vha. localStorage kan vi gemme vores data
             localStorage.setItem("bruger", JSON.stringify(bruger));
-            location.href = "/";
+            location.href = "/hovedside.html";
           } else {
             window.alert("Oplysningerne er forkerte");
           }
