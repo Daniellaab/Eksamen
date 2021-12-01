@@ -7,7 +7,7 @@ document.addEventListener("DOMContentLoaded", (event) => {
     document.getElementById("delete").addEventListener("submit", (event) => {
       event.preventDefault();
   
-      const bruger = JSON.parse(localStorage.getItem("bruger"));
+      const bruger = JSON.parse(localStorage.removeItem("bruger"));
   
       fetch("http://localhost:1801/brugere/delete", {
         method: "DELETE",

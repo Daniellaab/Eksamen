@@ -27,12 +27,6 @@ class DB {
     //     this.brugere.push(bruger);
     //     this.saveFile();
     // }
-
-    //Sletningen af brugere
-    deleteUser(bruger) {
-        this.brugere = this.brugere.filter((x) => x.email != bruger.kode);
-        this.saveFile(brugerData, JSON.stringify(this.brugere));
-    }
     
     //Login af bruger
     saveUser(bruger) {
@@ -44,6 +38,12 @@ class DB {
     findUser(bruger) {
         return this.brugere.find((x) => bruger.email == x.email);
     }
+    
+    //Sletningen af brugere
+    deleteUser(bruger) {
+        this.brugere = this.brugere.filter((x) => x.email != bruger.kode);
+        this.saveFile(brugerData, JSON.stringify(this.brugere));
+    } 
 }
 
 module.exports = new DB();
