@@ -34,7 +34,7 @@ document.addEventListener("DOMContentLoaded", (event) => {
           }
         })
         .catch(() => {
-          window.alert("Fejlmeddelse");
+          window.alert("Fejlmeddelelse");
         });
     });
   });

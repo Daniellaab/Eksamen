@@ -27,7 +27,7 @@ document.addEventListener("DOMContentLoaded", (event) => {
             // window.location.replace("/frontend/HTML/hovedside");
         })
         .catch(() => {
-            window.alert("Fejlmeddelse");
+            window.alert("Fejlmeddelelse");
         });
     });
 });
