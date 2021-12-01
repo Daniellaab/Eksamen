@@ -79,7 +79,7 @@
 //           }
 //         })
 //         .catch(() => {
-//           window.alert("Fejlmeddelse");
+//           window.alert("Fejlmeddelelse");
 //         });
 //     });
 //   });
