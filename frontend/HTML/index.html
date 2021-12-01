@@ -1,11 +1,36 @@
+<!DOCTYPE html>
 <html>
   <head>
-    <script src="index.js"></script>
+    <title>Loginside</title>
+    <link rel="stylesheet" href="style.css">
   </head>
+
   <body>
-    <h1>Det virker!</h1>
-    <form id="delete">
-      <input value="Delete" type="submit" />
-    </form>
+    <script src="login.js"></script>
+    <h1>Login her</h1>
+    <br><br>
+
+    <div>
+      <form id="loginform">
+        <div>
+          <th>
+            <input type="email" class="Email_login" id="email_input" placeholder="Email">
+          </th>
+        </div>
+        <br>
+        <div>
+          <th>
+             <input type="password" class="Login_login" id="kode_input" placeholder="Kode">
+          </th>
+        </div>
+        <br>        
+        <input type="submit" value="Login"/>
+      </form>
+    </div>
+    
+    <br><br>
+    <p class="Til_forside">Har du ingen bruger på Den blå bazar?</p>
+
+    <a href="reg.html" class="Til_forside_link">Tryk her!</a>
   </body>
 </html>

@@ -1,7 +1,7 @@
 document.addEventListener("DOMContentLoaded", (event) => {
     const bruger = localStorage.getItem("bruger");
     if (!bruger) {
-      location.href = "/login.html";
+      location.href = "/index.html";
     }
   
     document.getElementById("delete").addEventListener("submit", (event) => {
@@ -20,7 +20,7 @@ document.addEventListener("DOMContentLoaded", (event) => {
         .then((response) => {
           if (response) {
             localStorage.removeItem("bruger");
-            location.href = "/login.html";
+            location.href = "/index.html";
           }
         })
         .catch(() => {

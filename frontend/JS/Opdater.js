@@ -1,9 +1,49 @@
+// document.addEventListener("DOMContentLoaded", (event) => {
+//     const bruger = localStorage.getItem("bruger");
+//     if (bruger) {
+//       location.href = "/";
+//     }
+  
+//     document.getElementById("opdaterform").addEventListener("submit", (event) => {
+//       event.preventDefault();
+  
+//       const email = document.getElementById("email_input").value;
+//       const kode = document.getElementById("kode_input").value;
+  
+//       const bruger = {
+//         email: email,
+//         kode: kode,
+//       };
+  
+//       fetch("http://localhost:1801/brugere/opdater", {
+//         method: "PUT",
+//         headers: {
+//           "Content-Type": "application/json",
+//         },
+//         body: JSON.stringify(bruger),
+//       })
+//         .then((response) => response.json())
+//         .then((response) => {
+//           if (response) {
+//             localStorage.setItem("bruger", JSON.stringify(bruger));
+//             location.href = "/hovedside.html";
+//           } else {
+//             window.alert("Oplysningerne er forkerte");
+//           }
+//         })
+//         .catch(() => {
+//           window.alert("Fejlmeddelelse");
+//         });
+//     });
+//   });
+  
+
+
 // const { response } = require("express");
 
 // //Opdatere 
 // let submit_btn = document.getElementById("gem_bruger_knap");
-// let firstField = document.getElementById("opdater_fornavn");
-// let lastField = document.getElementById("opdater_efternavn");
+// let firstField = document.getElementById("opdater_email");
 // let kodeField = document.getElementById("opdater_kode");
 
 // const bruger_info = JSON.parse(window.localStorage.getItem("bruger_information"));

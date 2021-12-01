@@ -6,32 +6,26 @@
 <link rel="stylesheet" href="style.css">
 
 <body>
-<h1>Opdater din bruger</h1>    
-<br><br>
-<tr>
-    <th></th>
-    <td>
-        <input type="email" class="opdater_email" id="opdater_email" placeholder="Opdater din email">
-    </td>
-</tr>
-<br><br>
-<tr>
-    <th></th>
-    <th></th>
-    <td>
-        <input type="password" id="opdater_kode" class="opdater_kode" placeholder="Opdater kode">
-    </td>
-</tr>
-<br><br>
-<tr>
-    <th></th>
-    <td>
-        <button id="gem_bruger_knap" class="gem_bruger_knap">Gem</button>
+<h1>Opdater din bruger</h1>  
+<form id="opdaterform">
+    <div>
+      <th>
+        <input type="email" class="Email_login" id="email_input" placeholder="Opdater din email">
+      </th>
+    </div>
+    <br>
+      <div>
+        <th>
+          <input type="password" class="Login_login" id="kode_input" placeholder="Opdater din kode">
+        </th>
+      </div>
+      <br>
+      <div>
+        <input type="submit" value="Gem"/>
         <a href="hovedside.html">
             <button id="gå_tilbage_knap" class="gå_tilbage_knap">Gå tilbage</button>
         </a>
-    </td>
-</tr>
+      </form>  
 <script src="/frontend/JS/opdater.js"></script>
 </body>
 </html>
