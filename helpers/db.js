@@ -41,7 +41,7 @@ class DB {
     
     //Sletningen af brugere
     deleteUser(bruger) {
-        this.brugere = this.brugere.filter((x) => x.email != bruger.kode);
+        this.brugere = this.brugere.filter((x) => x.email != bruger.email);
         this.saveFile(brugerData, JSON.stringify(this.brugere));
     } 
 }
