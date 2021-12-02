@@ -22,12 +22,6 @@ class DB {
         const file = fs.readFileSync(Altdata + fileName);
         return JSON.parse(file);        
     }
-    //En bestemt bruger
-    // saveUser(bruger) {
-    //     this.brugere.push(bruger);
-    //     this.saveFile();
-    // }
-    
     //Login af bruger
     saveUser(bruger) {
         this.brugere.push(bruger);
@@ -44,6 +38,18 @@ class DB {
         this.brugere = this.brugere.filter((x) => x.email != bruger.email);
         this.saveFile(brugerData, JSON.stringify(this.brugere));
     } 
+    //Opdatering af brugerens oplysninger
+    updateUser(bruger) {
+    for (let i=0; i < this.brugere.length; i++) {
+      console.log(this.brugere[i]);
+      console.log(bruger);
+      if (this.brugere[i].email == bruger.gammelEmail) {
+        this.brugere[i].email = bruger.email;
+        this.brugere[i].kode = bruger.kode;
+      } 
+    }
+    this.saveFile(brugerData, JSON.stringify(this.brugere));
+  }
 }
 
 module.exports = new DB();

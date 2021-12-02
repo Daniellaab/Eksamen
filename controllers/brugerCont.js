@@ -29,34 +29,11 @@ router.post("/login", (req, res) => {
   }
 });
 
-// //Opdater bruger 
-// router.put("/opdater", (req, res) => {
-//   const bruger = {email: req.body.email, kode: req.body.kode, gammelEmail: req.body.gammelEmail};
-//   db.updateUser(bruger)
-//   res.status(200).send(true);
-// });
+//Opdater bruger 
+router.put("/opdater", (req, res) => {
+  const bruger = {email: req.body.email, kode: req.body.kode, gammelEmail: req.body.gammelEmail};
+  db.updateUser(bruger)
+  res.status(200).send(true);
+});
 
 module.exports = router;
-
-//Login med bruger (Min originale kode)
-// router.post("/login", (req, res) => {
-//   const bruger = new userModel(req.body.email, req.body.kode);
-//   const found = db.findUser(bruger);
-//   if (found) {
-//     if (bruger.kode == found.kode) {
-//       res.status(200).send(true);
-//     } else {
-//       res.status(401).send(false);
-//     }
-//   } else {
-//     res.status(404).send(false);
-//   }
-// });
-
-
-// //Opdater bruger kode
-// router.put("/opdater", (req, res) => {
-//   const bruger = {brugerEmail: req.body.brugerEmail, kode: req.body.kode, gammelEmail: req.body.gammelEmail};
-//   db.opdaterBruger(bruger)
-//   res.opdaterBruger(bruger);
-// });

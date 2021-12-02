@@ -6,8 +6,7 @@ const app = express();
 const brugerCont = require("./controllers/brugerCont");
 
 //Frontend
-app.use(express.static("./frontend/HTML"));
-app.use(express.static("./frontend/JS"));
+app.use(express.static("./view"));
 app.use(express.json());
 
 // Vores routes
