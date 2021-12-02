@@ -13,11 +13,6 @@ app.use(express.json());
 // Vores routes
 app.use("/brugere", brugerCont);
 
-//Middleware 
-//Kilde: https://heynode.com/tutorial/process-user-login-form-expressjs/
-// const bodyParser = require('body-parser');
-// const bruger = require('./models/bruger');
-// app.use(bodyParser.urlencoded({ extended: false })); 
 
 const PORT = 1801;
 app.listen(PORT, () => {
