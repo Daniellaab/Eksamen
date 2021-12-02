@@ -43,7 +43,19 @@ class DB {
     deleteUser(bruger) {
         this.brugere = this.brugere.filter((x) => x.email != bruger.email);
         this.saveFile(brugerData, JSON.stringify(this.brugere));
-    } 
+    }
+    //Opdater din bruger her
+    updateUser(bruger) {
+        for (let i=0; i < this.brugere.length; i++) {
+            console.log(this.brugere[i]);
+            console.log(bruger);
+            if (this.brugere[i].brugerEmail == bruger.gammelEmail) {
+                this.brugere[i].brugerEmail = bruger.brugerEmail;
+                this.brugere[i].kode = bruger.kode;
+            }
+        }
+        this.saveFile(brugerData, JSON.stringify(this.brugere));
+    }
 }
 
 module.exports = new DB();
