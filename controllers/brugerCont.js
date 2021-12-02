@@ -29,8 +29,6 @@ router.post("/login", (req, res) => {
   }
 });
 
-module.exports = router;
-
 // //Opdater bruger 
 // router.put("/opdater", (req, res) => {
 //   const bruger = {email: req.body.email, kode: req.body.kode, gammelEmail: req.body.gammelEmail};
