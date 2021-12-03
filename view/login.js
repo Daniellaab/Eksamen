@@ -2,7 +2,7 @@ document.addEventListener("DOMContentLoaded", (event) => {
   
   // const bruger = localStorage.getItem("bruger");
   // if (bruger) {
-  //   location.href = "/hovedside.html";
+  //   location.href = "/loggetInd.html";
   // }
   
   document.getElementById("loginform").addEventListener("submit", (event) => {
