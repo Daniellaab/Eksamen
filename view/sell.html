@@ -3,31 +3,28 @@
 <head>
     <title>Sælg</title>
 </head>
-
+<script> src="regVare.js"</script>
 <body>
 <h1>Velkommen til Den blå bazar!</h1>
 
 <h2>Her kan du oprette en salgsannonce</h2>
 <div>
-    <p>Vælg en pris</p>
-    <th>
-        <input type="text" class="info_vare" id="pris"> 
-    </th>
-</div>
-<div>
-    <p>Beskriv din vare</p>
-    <th>
-        <input type="text" class="info_vare" id="beskrivelse">
-    </th>
-</div>
-<br> 
-<tr> 
-    <th>
-        <button class="sælg_button" id="sælg_btn">Sælg</button>
-        <a href="visVarer.html">
-    </th>
-</tr>
-<br><br>
+    <form id="vareForm">
+        <p>Vælg en varekategori</p>
+        <select id="varekategori" placeholder="Varekategori">
+            <option>Til boligen</option>
+            <option>Tøj</option>
+            <option>Have og byg</option>
+            <option>Elektronik</option>
+        </select>
+        <p>Beskriv din vare</p>
+        <input id="beskrivelse" placeholder="Beskrivelse"/>
+        <p>Vælg en pris</p>
+        <input id="pris" placeholder="Pris"/>
+        <br><br>
+        <input type="submit" value="Sælg din vare"/>
+    </form>
+<br>
 <a href= hovedside.html class="Forside1">Gå tilbage til hovedsiden</a>
   <script src="/view/sell.html"></script>
   </body>
