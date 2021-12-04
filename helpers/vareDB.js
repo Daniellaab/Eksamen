@@ -12,14 +12,13 @@ class varerDB {
     }
     //Vi vil gerne kunne gemme vores fil så derfor bruger vi saveFile
     saveFile(fileName, contentString) {
-        fs.writeFileSync(varerDB + fileName, contentString);
+        fs.writeFileSync(Altdata + fileName, contentString);
     }
     //Åbne vores fil
     openFile(fileName) {
         const file = fs.readFileSync(Altdata + fileName);
         return JSON.parse(file);        
     }
-    //Login af bruger
     saveVare(vare) {
         this.varer.push(vare);
         this.saveFile(varerData, JSON.stringify(this.varer));

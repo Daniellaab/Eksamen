@@ -22,7 +22,7 @@ document.addEventListener("DOMContentLoaded", (event) => {
         .then((response) => response.json())
         .then((response) => {
             if (response) {
-                window.alert("Din vare er hermed blevet oprettet!")
+                window.alert("Din vare er hermed blevet oprettet!");
             }
         })
         .catch(() => {
