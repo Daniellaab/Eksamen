@@ -19,3 +19,5 @@ const PORT = 1801;
 app.listen(PORT, () => {
     console.log(`Server lytter på http://localhost:${PORT}`);
 });
+
+module.exports = app;
