@@ -1,4 +1,4 @@
-//Vi benytter os af require og file system modulet (fs) til at opbevare data
+//Vi benytter os af require og file system modulet (fs)
 var fs = require('fs');
 
 // Opretter const til vores path for brugere og samlet data

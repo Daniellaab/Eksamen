@@ -10,4 +10,11 @@ router.post("/opretV", (req, res) => {
   res.status(200).send(true);
 });
 
+//Slette varen i JSON-filen
+router.delete("/deleteV", (req, res) => {
+  const vare = new varerModel(req.body.varekategori, req.body.beskrivelse, req.body.pris);
+  varerDB.deleteVare(vare);
+  res.status(200).send(true);
+});
+
 module.exports = router; 

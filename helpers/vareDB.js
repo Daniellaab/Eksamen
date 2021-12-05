@@ -23,6 +23,11 @@ class varerDB {
         this.varer.push(vare);
         this.saveFile(varerData, JSON.stringify(this.varer));
     }
+    //Sletningen af varen
+    deleteVare(vare) {
+        this.varer = this.varer.filter((x) => x.beskrivelse != vare.beskrivelse);
+        this.saveFile(varerData, JSON.stringify(this.varer));
+    } 
 }
 
 module.exports = new varerDB();

@@ -24,6 +24,7 @@ document.addEventListener("DOMContentLoaded", (event) => {
             if (response) {
                 window.alert("Din vare er hermed blevet oprettet!");
             }
+            window.localStorage.setItem("vare", JSON.stringify(vare));
         })
         .catch(() => {
             window.alert("Fejlmeddelelse");
