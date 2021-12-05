@@ -2,10 +2,9 @@ document.addEventListener("DOMContentLoaded", (event) => {
     //Slette varen
     document.getElementById("formSlet").addEventListener("submit", (event) => {
         event.preventDefault();
-
         //Finder varen og omdannes til JSON-objekt
         const vare = JSON.parse(localStorage.getItem("vare"));
-        fetch("http://localhost:1801/vare/deleteV", {
+        fetch("http://localhost:1801/varer/deleteV", {
             method: "DELETE",
             headers: {
                 "Content-Type": "application/json",

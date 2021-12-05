@@ -23,6 +23,10 @@ class varerDB {
         this.varer.push(vare);
         this.saveFile(varerData, JSON.stringify(this.varer));
     }
+    //Find vare
+    findVare(vare) {
+        return this.varer.find((x) => vare.beskrivelse == x.beskrivelse);
+    }
     //Sletningen af varen
     deleteVare(vare) {
         this.varer = this.varer.filter((x) => x.beskrivelse != vare.beskrivelse);
