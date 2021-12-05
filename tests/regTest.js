@@ -6,14 +6,14 @@ const app = require("../server")
 chai.use(chaiHttp);
 
 describe("reg", () => {
-    describe("POST /opret", () => {
-       it("skal ikke videresende brugeren til hovedsiden uden at være oprettet", (done) => {
+    describe("POST brugere/opret", () => {
+       it("oprette en ny bruger", (done) => {
            chai
            .request(app)
-           .post("/opret")
-           .send({email:"",kode:""})
+           .post("/brugere/opret")
+           .send({email:"test@mail.dk",kode:"1234"})
            .end((err, res) => {
-               expect(res.status).to.equal(404);
+               expect(res.status).to.equal(200);
                done();
            });
        });
