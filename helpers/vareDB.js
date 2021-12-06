@@ -31,7 +31,19 @@ class varerDB {
     deleteVare(vare) {
         this.varer = this.varer.filter((x) => x.beskrivelse != vare.beskrivelse);
         this.saveFile(varerData, JSON.stringify(this.varer));
-    } 
+    }
+    //Opdatering af varens oplysninger
+    updateVare(vare) {
+        for (let i=0; i < this.varer.length; i++) {
+          console.log(this.varer[i]);
+          console.log(vare);
+          if (this.varer[i].beskrivelse == vare.gammelBeskrivelse) {
+            this.varer[i].beskrivelse = vare.beskrivelse;
+            this.varer[i].pris = vare.pris;
+          } 
+        }
+        this.saveFile(varerData, JSON.stringify(this.varer));
+      } 
 }
 
 module.exports = new varerDB();

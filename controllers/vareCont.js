@@ -17,4 +17,11 @@ router.delete("/deleteV", (req, res) => {
   res.status(200).send(true);
 });
 
+//Opdater vare 
+router.put("/opdaterV", (req, res) => {
+  const vare = {beskrivelse: req.body.beskrivelse, pris: req.body.pris, gammelBeskrivelse: req.body.gammelBeskrivelse};
+  varerDB.updateVare(vare);
+  res.status(200).send(true);
+});
+
 module.exports = router; 

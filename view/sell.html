@@ -26,6 +26,23 @@
         <input type="submit" value="Sælg din vare"/>
     </form>
 <br>
+<p>For at opdatere din gemte vare så klik på knappen forneden!</p>
+<form id="formOpdaterV">
+    <div>
+      <th>
+        <input type="text" class="beskrivelse_input" id="NyBeskrivelse" placeholder="Opdater beskrivelse">
+      </th>
+    </div>
+    <br>
+      <div>
+        <th>
+          <input type="text" class="pris_input" id="NyPris" placeholder="Opdater pris">
+        </th>
+      </div>
+      <br>
+      <div>
+        <button id="updateV" type="submit" onclick="updateVare()" class="vare_btn">Opdater</button>
+      </form> 
 <p>Ønsker du at slette din gemte vare så klik på knappen forneden!</p>
 <form id="formSlet">     
     <input type="submit" value="Slet"/>
@@ -34,6 +51,7 @@
 <a href= hovedside.html class="Forside1">Gå tilbage til hovedsiden</a>
 <script src="regVare.js"></script>
 <script src="vareOpg.js"></script>
+<script src="opdaterVare.js"></script>
 </body>
 </html>
 
