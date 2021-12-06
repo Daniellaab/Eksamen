@@ -32,7 +32,7 @@ router.post("/login", (req, res) => {
 //Opdater bruger 
 router.put("/opdater", (req, res) => {
   const bruger = {email: req.body.email, kode: req.body.kode, gammelEmail: req.body.gammelEmail};
-  db.updateUser(bruger)
+  db.updateUser(bruger);
   res.status(200).send(true);
 });
 

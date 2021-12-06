@@ -3,8 +3,8 @@ function updateUser() {
     var gammelEmail =localStorage.getItem("bruger");
     gammelEmail = JSON.parse(gammelEmail);
 
-    var email = document.getElementById("nyEmail").value; 
-    var kode = document.getElementById("nyKode").value;
+    var email = document.getElementById("NyEmail").value; 
+    var kode = document.getElementById("NyKode").value;
 
     const updateUser = {email: email, kode: kode, gammelEmail: gammelEmail.email};
     const update = {email: email, kode: kode};
@@ -19,8 +19,8 @@ function updateUser() {
       .then((response) => response.json())
       .then((response) => {
           if (response) {
-              window.alert("Brugeroplysningerne er hermed blevet opdateret!")
-              localStorage.setItem("bruger", JSON.stringify(update));
+            localStorage.setItem("bruger", JSON.stringify(update))
+            window.alert("Brugeroplysningerne er hermed blevet opdateret!")
           }
         })
         .catch(() => {
