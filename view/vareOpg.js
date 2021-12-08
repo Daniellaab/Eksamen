@@ -25,29 +25,3 @@ document.addEventListener("DOMContentLoaded", (event) => {
         });
     });
 });
-
-// //Noter til opload af vare
-// const billedeOpload = event => {
-//     const filer = event.target.filer
-//     const vareForm = new vareForm()
-//     vareForm.append('altData', filer[0])
-  
-//     fetch('/gemBillede', {
-//       method: 'POST',
-//       headers: {
-//           "Content-type": "application/json",
-//       },
-//       body: vareForm,
-//     })
-//     .then(response => response.json())
-//     .then(varerData => {
-//       console.log(altData.path)
-//     })
-//     .catch(error => {
-//       console.error(error)
-//     })
-//   }
-  
-//   document.querySelector("vareForm").addEventListener('submit', event => {
-//     billedeOpload(event)
-//   })

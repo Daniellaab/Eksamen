@@ -4,6 +4,7 @@ const varerModel = require("./../models/vare");
 const varerDB = require("./../helpers/vareDB");
 const { varer } = require("./../helpers/vareDB");
 const vare = require("./../models/vare");
+const varerTo = ("/varer.json")
 
 //Til at registrere en vare i vores JSON-fil
 router.post("/opretV", (req, res) => {
@@ -26,7 +27,6 @@ router.put("/opdaterV", (req, res) => {
   res.status(200).send(true);
 });
 
-const varerTo = require("./../data/varer.json")
 //Returnere alle varerne
 router.get("/returnerVare", (req, res) => {
   const vare = varerDB.openFile(varerTo)
