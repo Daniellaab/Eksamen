@@ -1,7 +1,7 @@
 //Vi benytter os af require og file system modulet (fs) til at opbevare data
 var fs = require('fs');
 
-// Opretter const til vores path for brugere og samlet data
+// Opretter const til vores path for varer og samlet data
 const Altdata = __dirname + "/../data";
 const varerData = "/varer.json";
 
