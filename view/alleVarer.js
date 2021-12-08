@@ -24,7 +24,7 @@ document.getElementById("formAlle").addEventListener("click", async () => {
     }
     table.innerHTML=tableHTML
 })
-//Varekategori (krav 11)
+//Varekategoriopgave (krav 11)
 //første knap med bolig
 document.getElementById("clickBolig").addEventListener("click", async () => {
     let table = document.getElementById("varekatListe");
